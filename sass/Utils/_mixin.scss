@@ -1,0 +1,11 @@
+
+@mixin Flex-C {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin Margin-left {
+    margin-left: 8px;    
+}

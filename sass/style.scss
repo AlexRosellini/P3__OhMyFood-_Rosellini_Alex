@@ -1,6 +1,10 @@
+@import '../sass/Base/_base';
+@import '../sass/Utils/mixin';
 @import '../sass/Utils/Loading';
+@import '../sass/Pages/index';
 
-img
+
+section img
 {
     display: none;
 }
