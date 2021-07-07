@@ -1,7 +1,8 @@
+
+@import '../Utils/Variables';
+
 .loadingbg
 {  
-
-
   /*BackgroundLoader*/
 
   width: 100%;
@@ -10,6 +11,7 @@
   animation: bg ease-in-out 3s;
   animation-fill-mode: forwards;
   margin: auto;
+  z-index: 2;
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   visibility: hidden;
@@ -25,10 +27,11 @@
  height: 100px;
  margin: auto;
  position: fixed;
+ z-index: 2;
  top: 0; left: 0; right: 0; bottom: 0;
  border: 10px solid #f3f3f3;  
- border-left-color: red;
- border-right-color: blue;
+ border-left-color: $primary;
+ border-right-color: $secondary;
  border-radius: 200px; 
  animation: spin 3s  ease-in-out;
  animation-fill-mode: forwards;

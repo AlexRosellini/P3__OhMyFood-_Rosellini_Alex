@@ -1,0 +1,24 @@
+@import '../Utils/Variables';
+
+.restaurants-container__heart
+{
+    margin-top: 1em;
+    margin-right: 5em;
+}
+
+.restaurants-container__full
+{
+    position: absolute;
+    font-size: 40px;
+    background-clip:border-box;
+    border: black solid 1px;
+    color: transparent;
+    background-image: linear-gradient(to top, $primary, $secondary);
+}
+
+.restaurants-container__empty
+{
+    position: absolute;
+    font-size: 40px;
+
+}
