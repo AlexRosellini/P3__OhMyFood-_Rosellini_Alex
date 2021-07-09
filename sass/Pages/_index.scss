@@ -244,13 +244,53 @@
         color: white;
     }
 
+    & li:hover 
+    {
+        text-decoration: underline;
+    }
+
     &__icon
     {
         padding-right: 5px;
     }
 }
 
+@media screen and (min-width: 800px) {    
 
+    .fonctionement {
+    @include Flex-C;
+    flex-direction: row;
+
+    &__box 
+    {
+        margin-left: 40px;
+    } 
+
+    & h2 
+    {
+        margin-top: 0px;
+    }
+ }
+    .restaurants-container {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 28px;
+    }
+
+    .footer ul 
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer li 
+    {
+        padding-right: 40px;
+    }
+
+    
+}
 
 
    

@@ -10,10 +10,19 @@
 {
     position: absolute;
     font-size: 40px;
-    background-clip:border-box;
-    border: black solid 1px;
+    font-weight: 0px;
+    background-clip: text;
+    
+    -webkit-background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to top, $primary, $secondary);
+    background-image: linear-gradient(to right, $primary, $secondary);
+    opacity: 0;
+
+    &:hover
+    {        
+       animation: appear 200ms ease-in-out;    
+       animation-fill-mode: forwards;
+    }
 }
 
 .restaurants-container__empty
@@ -21,4 +30,35 @@
     position: absolute;
     font-size: 40px;
 
+    &:hover 
+    {
+
+        animation: disappear 2s;
+        animation-fill-mode: forwards;
+    
+    }
+}
+
+@keyframes disappear
+{
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes appear
+{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
 }
