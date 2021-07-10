@@ -1,0 +1,112 @@
+
+.menu-bloc:hover .menu-bloc__price
+{
+    animation: moveleft 0.5s ease-in;
+    animation-fill-mode: both;
+}
+
+.menu-bloc:hover .menu-bloc__icon
+{
+    animation: appear 0.5s ease-in;
+    animation-fill-mode: both;
+    transform-origin: 85%;
+}
+
+.menu-bloc:hover .fa-check-circle
+{
+    animation: rotate 0.5s ease-in;
+    animation-fill-mode: both;
+}
+
+@keyframes rotate 
+{
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveleft
+{
+    0% {
+        transform: translateX(0);
+        padding-left: 20px;
+    }
+
+    100% {
+        transform: translateX(-50px);
+        padding-left: 50px;
+    }
+}
+
+@keyframes appear
+{
+    0% {
+        visibility: visible;
+        transform: scaleX(0);
+    }
+
+    100% {
+        visibility: visible;
+        transform: scaleX(-50px);
+    }
+}
+
+.menu-bloc {
+    animation: menu-appear 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.4,1.41,.41,.90)
+    
+    &1 {
+        animation-delay: 0.1s;
+    }
+
+    &2 {
+        animation-delay: 0.2s;
+    }
+
+    &3 {
+        animation-delay: 0.3s;
+    }
+
+    &4 {
+        animation-delay: 0.4s;
+    }
+
+    &5 {
+        animation-delay: 0.5s;
+    }
+
+    &6 {
+        animation-delay: 0.6s;
+    }
+
+    &7 {
+        animation-delay: 0.7s;
+    }
+
+    &8 {
+        animation-delay: 0.8s;
+    }
+
+    &9 {
+        animation-delay: 0.9s;
+    }
+
+}
+
+@keyframes menu-appear
+{
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

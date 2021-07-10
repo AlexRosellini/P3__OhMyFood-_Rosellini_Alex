@@ -41,16 +41,26 @@
   }
 
   &__container {
-    display: flex;
-    flex-direction: column;
     position: relative;
     margin-top: -80px;
     width: 100%;
     border-radius: 40px 40px 0px 0px;
-    background-color: #f3eded;
+    background-color: #faf4f4;
   }
 
-  .menu {
+
+  &__title {
+    font-family: Shrikhand, "cursive";
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+
+  }
+}
+
+.menu {
     margin-left: 10px;
     margin-right: 20px;
     margin-top: -30px;
@@ -62,62 +72,122 @@
       font-size: 24px;
       font-weight: 100;
     }
-
-    &__bloc {
-      background-color: white;
-      font-size: 18px;
-      border-radius: 20px;
-      box-shadow: 0px 0px 10px rgba(131, 129, 129, 0.452);
-      padding: 5px;
-      padding-left: 10px;
-      display: flex;
-      align-items: center;
-      display: grid;
-      grid-template-columns: 75% 25% 0%;
-      grid-template-rows: 30px 30px;
-      margin-bottom: 20px;
-      height: 60px;
-      grid-template-areas:
-        "Nom  Prix Icon"
-        "Desc Prix Icon";
-
-      & h4 {
-        grid-area: Nom;
-      }
-    }
   }
 
-  .menu__icon 
-  {
-    grid-area: Icon;
-    visibility: visible;
-    @include Flex-C;
-    width: 40px;
-    height: 40px;
-    margin-left: -40px;
-    background-color: red;
-  }
-
-  .menu__desc {
-    grid-area: Desc;
-  }
-
-  .menu__price {
-    grid-area: Prix;
-    padding-left: 45px;
-  }
-
-  &__title {
-    font-family: Shrikhand, "cursive";
-    text-align: center;
+.menu-bloc 
+{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 10px;
+    width: 100%;
+    height: 85px;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    box-shadow: 0px 0px 10px rgba(131, 129, 129, 0.452);
 
-    & h3 {
-      font-family: Shrikhand, "cursive";
-      text-align: center;
+    &__left 
+    {
+        padding-right: 10px;
+        margin-top: -5px;
+        font-size: 18px;        
+        white-space: nowrap;
+        overflow: hidden;
     }
-  }
+
+    &__desc
+    {
+        margin-top: -15px;
+        overflow: hidden; 
+        text-overflow: ellipsis;
+    }
+
+    & h4 
+    {
+        overflow: hidden; 
+        text-overflow: ellipsis;
+    }
+
+    &__right 
+    {
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    &__icon 
+    {
+
+        background-color: $tertiary;
+        color: white;
+        height: 85px;
+        width: 60px;
+        @include Flex-C;
+        border-radius: 0px 20px 20px 0px;
+        font-size: 25px;
+        visibility: hidden;
+    }
+
+    &__price 
+    {
+        @include Flex-C;
+        margin-right: -40px;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+}
+
+.btn-container
+{
+    @include Flex-C;
+    background-color: #faf4f4;
+  
+    &__actual
+    {
+    @include Flex-C;
+    width: 100px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 200px;
+    background-image: linear-gradient(to top, $primary, $secondary);
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(179, 179, 179, 0.212);
+    background-color: #faf4f4;
+    color: white;
+    margin-bottom: 25px;
+    }
+}
+
+
+
+
+@import "../Utils/menuanim";
+
+@media screen and (min-width: 800px) 
+{
+
+    .menu-general__container
+    {
+        width: 98%;
+        margin-top: -25px ;
+        margin-left: 14px;
+    }
+
+    .menus 
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu 
+    {
+      width: 25%;
+    }
+
+
+
+
+
 }
