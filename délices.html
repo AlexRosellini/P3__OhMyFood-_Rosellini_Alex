@@ -4,44 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sass/style.css">
+    <script src="https://kit.fontawesome.com/747f9e06bc.js" crossorigin="anonymous"></script>
     <title>Ohmyfood!</title>
 </head>
 <body>
     <main>
-        <header>   
-        <!--Header--> 
-            <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-            <img src="img/logo/ohmyfood@2x.svg" alt="logo">
+        <!--Header-->
+        <header class="header-menu">
+            <div class="header-menu__icon">
+                <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="header-menu__logo">
+                <img src="img/logo/ohmyfood@2x.svg" alt="Ohmyfood">
+            </div>          
         </header>
-        <section class="menu">
+        <section class="menu-general">
         <!--Menu-->
-            <div class="backimage"><img src="img/restaurants/Le-délice-des-sens.jpg" alt="Le délice des sens"></div>
-            <div class="menu__container">
-                <h2>Le délice des sens</h2>
-                <div class="box__heart">
-                    <i class="far fa-heart-empty"></i>
-                    <i class="fas fa-heart-full"></i>
+            <div class="menu-general__backimage"><img src="img/restaurants/Le-délice-des-sens.jpg" alt="Le délice des sens"></div>
+            <div class="menu-general__container">
+                <div class="menu-general__title">
+                    <h2>Le délice des sens</h2>
+                    <div class="hearts-menu">
+                        <i class="far fa-heart heart-empty"></i>
+                        <i class="fas fa-heart heart-full"></i>
+                    </div>
                 </div>
                 <div class="menu">
                 <!--Entrées-->
                     <h3>ENTRÉES</h3>
                     <div class="menu__bloc">
                         <h4>Tartare de thon</h4>
-                        <p>Assaisonné au yuzu</p>
-                        <p class="menu__prix"><span>25€</span></p>
+                        <p class="menu__desc">Assaisonné au yuzu</p>
+                        <p class="menu__price"><span>25€</span></p>
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <div class="menu__bloc">
                         <h4>Bouchée de homard croustillant</h4>
-                        <p>Et sa farandole de petites légumes</p>
-                        <p class="menu__prix"><span>35€</span></p>
+                        <p class="menu__desc">Et sa farandole de petites légumes</p>
+                        <p class="menu__price"><span>35€</span></p>
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <div class="menu__bloc">
                         <h4>Velouté de cèpes</h4>
-                        <p>Aux truffes</p>
-                        <p class="menu__prix"><span>20€</span></p>
+                        <p class="menu__desc">Aux truffes</p>
+                        <p class="menu__price"><span>20€</span></p>
                         <i class="fas fa-check-circle"></i>
                     </div>
                 </div>
@@ -50,20 +59,20 @@
                     <h3>PLATS</h3>
                     <div class="menu__bloc">
                         <h4>Poulet rôti aux herbes de Provence</h4>
-                        <p>et sa crème de truffe</p>
-                        <p class="menu__prix"><span>40€</span></p>
+                        <p class="menu__desc">et sa crème de truffe</p>
+                        <p class="menu__price"><span>40€</span></p>
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <div class="menu__bloc">
                         <h4>Langouste rôtie</h4>
-                        <p>Et ses légumes de saison</p>
-                        <p class="menu__prix"><span>35€</span></p>
+                        <p class="menu__desc">Et ses légumes de saison</p>
+                        <p class="menu__price"><span>35€</span></p>
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <div class="menu__bloc">
                         <h4>Côte de boeuf Angus</h4>
-                        <p>Et sa purée de panais</p>
-                        <p class="menu__prix"><span>44€</span></p>
+                        <p class="menu__desc">Et sa purée de panais</p>
+                        <p class="menu__price"><span>44€</span></p>
                         <i class="fas fa-check-circle"></i>
                     </div>
                 </div>
@@ -72,21 +81,21 @@
                     <h3>DESSERTS</h3>
                     <div class="menu__bloc">
                         <h4>Farandole de desserts</h4>
-                        <p>Du chef</p>
-                        <p class="menu__prix"><span>18€</span></p>
+                        <p class="menu__desc">Du chef</p>
+                        <p class="menu__price"><span>18€</span></p>
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <div class="menu__bloc">
                         <h4>Crème brulée</h4>
-                        <p>Revisitée</p>
-                        <p class="menu__prix"><span>22€</span></p>
+                        <p class="menu__desc">Revisitée</p>
+                        <p class="menu__price"><span>22€</span></p>
                         <i class="fas fa-check-circle"></i>
                     </div>
                 </div>
                 <div class="menu__bloc">
                     <h4>Tiramisu</h4>
-                    <p>À la noisette</p>
-                    <p class="menu__prix"><span>23€</span></p>
+                    <p class="menu__desc">À la noisette</p>
+                    <p class="menu__price"><span>23€</span></p>
                     <i class="fas fa-check-circle"></i>
                 </div> 
             </div>
@@ -94,9 +103,9 @@
                 <p>Commander</p>
             </div>
         </section>
-        <footer>
-        <!--Footer-->
-            <div class="footer__logo"><img src="img/logo/ohmyfood@2x.svg" alt="Ohmyfood"></div>
+        <footer class="footer">
+            <!--Footer-->
+            <div class="footer__logo"><p>ohmyfood</p></div>
             <ul>
                 <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
                 <li><i class="fas fa-hands-helping"></i> Devenir parternaire</li>
