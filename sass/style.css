@@ -624,7 +624,7 @@ body ul {
 .menu-general__backimage img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 350px;
+  height: 250px;
   width: 100%;
 }
 
@@ -637,7 +637,7 @@ body ul {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  margin-top: -150px;
+  margin-top: -80px;
   width: 100%;
   border-radius: 40px 40px 0px 0px;
   background-color: #f3eded;
@@ -659,6 +659,7 @@ body ul {
 
 .menu-general .menu__bloc {
   background-color: white;
+  font-size: 18px;
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 10px rgba(131, 129, 129, 0.452);
           box-shadow: 0px 0px 10px rgba(131, 129, 129, 0.452);
@@ -674,10 +675,10 @@ body ul {
   display: grid;
   -ms-grid-columns: 75% 25% 0%;
       grid-template-columns: 75% 25% 0%;
-  -ms-grid-rows: 40px 30px;
-      grid-template-rows: 40px 30px;
+  -ms-grid-rows: 30px 30px;
+      grid-template-rows: 30px 30px;
   margin-bottom: 20px;
-  height: 80px;
+  height: 60px;
       grid-template-areas: "Nom  Prix Icon" "Desc Prix Icon";
 }
 
@@ -687,12 +688,26 @@ body ul {
   grid-area: Nom;
 }
 
-.menu-general .menu__bloc i {
+.menu-general .menu__icon {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 3;
   grid-area: Icon;
-  visibility: hidden;
+  visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  margin-left: -40px;
+  background-color: red;
 }
 
 .menu-general .menu__desc {
@@ -706,10 +721,11 @@ body ul {
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: Prix;
+  padding-left: 45px;
 }
 
 .menu-general__title {
-  font-family: Shrikhand,"cursive";
+  font-family: Shrikhand, "cursive";
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -725,6 +741,6 @@ body ul {
 }
 
 .menu-general__title h3 {
-  font-family: Shrikhand,"cursive";
+  font-family: Shrikhand, "cursive";
   text-align: center;
 }
