@@ -461,7 +461,7 @@ body ul {
 .heart-full {
   position: absolute;
   font-size: 40px;
-  font-weight: 0px;
+  font-weight: 40px;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -470,7 +470,14 @@ body ul {
   opacity: 0;
 }
 
-.heart-full:hover {
+.hearts-menu:hover .heart-full {
+  -webkit-animation: heart-appear 200ms ease-in-out;
+          animation: heart-appear 200ms ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.hearts-index:hover .heart-full {
   -webkit-animation: heart-appear 200ms ease-in-out;
           animation: heart-appear 200ms ease-in-out;
   -webkit-animation-fill-mode: forwards;
@@ -482,15 +489,25 @@ body ul {
   font-size: 40px;
 }
 
-.heart-empty:hover {
-  -webkit-animation: heart-disappear 2s;
-          animation: heart-disappear 2s;
+.hearts-menu:hover .heart-empty {
+  -webkit-animation: heart-disappear 400ms ease-in-out;
+          animation: heart-disappear 400ms ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.hearts-index:hover .heart-empty {
+  -webkit-animation: heart-disappear 400ms ease-in-out;
+          animation: heart-disappear 400ms ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes heart-disappear {
   0% {
+    opacity: 1;
+  }
+  50% {
     opacity: 1;
   }
   100% {
@@ -503,6 +520,9 @@ body ul {
   0% {
     opacity: 1;
   }
+  50% {
+    opacity: 1;
+  }
   100% {
     opacity: 0;
     visibility: hidden;
@@ -512,9 +532,13 @@ body ul {
 @-webkit-keyframes heart-appear {
   0% {
     opacity: 0;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
   }
   100% {
     opacity: 1;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
     visibility: visible;
   }
 }
@@ -522,9 +546,13 @@ body ul {
 @keyframes heart-appear {
   0% {
     opacity: 0;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
   }
   100% {
     opacity: 1;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
     visibility: visible;
   }
 }
@@ -892,9 +920,13 @@ body ul {
           animation: menu-appear 0.5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.4, 1.41, 0.41, 0.9) .menu-bloc 1;
-          animation-timing-function: cubic-bezier(0.4, 1.41, 0.41, 0.9) .menu-bloc 1;
-  animation-timing-function-animation-delay: 0.1s;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 1.41, 0.41, 0.9);
+          animation-timing-function: cubic-bezier(0.4, 1.41, 0.41, 0.9);
+}
+
+.menu-bloc1 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
 .menu-bloc2 {

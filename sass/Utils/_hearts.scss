@@ -1,69 +1,75 @@
-@import '../Utils/Variables';
+@import "../Utils/Variables";
 
-.hearts-index
-{
-    margin-top: 1em;
-    margin-right: 5em;
+.hearts-index {
+  margin-top: 1em;
+  margin-right: 5em;
 }
 
-.hearts-menu
-{
-    margin-right: 5em;
-    margin-top: 1em;
+.hearts-menu {
+  margin-right: 5em;
+  margin-top: 1em;
 }
 
-.heart-full
-{
-    position: absolute;
-    font-size: 40px;
-    font-weight: 0px;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to right, $primary, $secondary);
+.heart-full {
+  position: absolute;
+  font-size: 40px;
+  font-weight: 40px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, $primary, $secondary);
+  opacity: 0;
+}
+
+.hearts-menu:hover .heart-full {
+  animation: heart-appear 200ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.hearts-index:hover .heart-full {
+  animation: heart-appear 200ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.heart-empty {
+  position: absolute;
+  font-size: 40px;
+}
+
+.hearts-menu:hover .heart-empty {
+  animation: heart-disappear 400ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.hearts-index:hover .heart-empty {
+  animation: heart-disappear 400ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes heart-disappear {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
     opacity: 0;
-
-    &:hover
-    {        
-       animation: heart-appear 200ms ease-in-out;    
-       animation-fill-mode: forwards;
-    }
+    visibility: hidden;
+  }
 }
 
-.heart-empty
-{
-    position: absolute;
-    font-size: 40px;
+@keyframes heart-appear {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
 
-    &:hover 
-    {
-
-        animation: heart-disappear 2s;
-        animation-fill-mode: forwards;
-    
-    }
-}
-
-@keyframes heart-disappear
-{
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-@keyframes heart-appear
-{
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        visibility: visible;
-    }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+    visibility: visible;
+  }
 }
