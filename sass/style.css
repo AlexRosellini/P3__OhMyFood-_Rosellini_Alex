@@ -221,7 +221,7 @@ body ul {
 }
 
 .header-index__mainbox h2 {
-  margin-top: 10px;
+  padding-top: 20px;
 }
 
 .header-index__mainbox p {
@@ -281,7 +281,7 @@ body ul {
 
 .fonctionement h2 {
   text-align: left;
-  padding-left: 10px;
+  padding-left: 20px;
   margin-bottom: -10px;
 }
 
@@ -930,57 +930,12 @@ body ul {
 }
 
 .menu-bloc {
-  -webkit-animation: menu-appear 0.5s;
-          animation: menu-appear 0.5s;
+  -webkit-animation: menu-appear 0.9s;
+          animation: menu-appear 0.9s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-timing-function: cubic-bezier(0.4, 1.41, 0.41, 0.9);
           animation-timing-function: cubic-bezier(0.4, 1.41, 0.41, 0.9);
-}
-
-.menu-bloc1 {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-
-.menu-bloc2 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-
-.menu-bloc3 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-.menu-bloc4 {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
-.menu-bloc5 {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-.menu-bloc6 {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-
-.menu-bloc7 {
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-}
-
-.menu-bloc8 {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-
-.menu-bloc9 {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
 }
 
 @-webkit-keyframes menu-appear {
@@ -1007,6 +962,26 @@ body ul {
             transform: scale(1);
     opacity: 1;
   }
+}
+
+.menu-bloc:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.menu-bloc:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.menu-bloc:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.menu-bloc:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 @media screen and (min-width: 800px) {

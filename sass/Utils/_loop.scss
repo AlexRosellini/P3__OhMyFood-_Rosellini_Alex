@@ -1,0 +1,10 @@
+.menu-bloc {
+
+@for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+        animation-delay: ($i * 0.1s);
+    }
+}
+}
+
+
