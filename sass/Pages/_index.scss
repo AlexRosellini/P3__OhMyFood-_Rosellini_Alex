@@ -56,21 +56,33 @@
     }
 }       
 
-.mainbox__button
+.btn-container
 {
+    @include Flex-C;
+    background-color: #faf4f4;
+  
+    &__actual
+    {
+    @include Flex-C;
+    font-size: 20px;
     border-radius: 200px;
     background-image: linear-gradient(to top, $primary, $secondary);
-    padding: 20px;
-    opacity: 1;
+    padding: 10px;
     box-shadow: 0px 0px 10px rgba(179, 179, 179, 0.212);
+    background-color: #faf4f4;
+    margin-bottom: 25px;
 
-        & a:link, a:visited
-        {
-            color: white;
-            font-size: 18px;
-        
-        }
+      & a:link, a:visited {
+        color: white;
+      }
+
+      &:hover {
+        transform: scale(0.99);
+        opacity: 0.8;
+      }
+    }
 }
+
 
 .fonctionement
 {
@@ -128,7 +140,7 @@
 
 .fonctionement__box:hover
 {
-    transform: scale(1.05);
+    background-color: #9256dc46;
 }
 
 .restaurants {

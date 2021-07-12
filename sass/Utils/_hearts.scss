@@ -18,31 +18,32 @@
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to right, $primary, $secondary);
-  opacity: 0;
+  clip-path: circle(0%);
 }
 
 .hearts-menu:hover .heart-full {
-  animation: heart-appear 200ms ease-in-out;
+  animation: heart-appear 600ms ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .hearts-index:hover .heart-full {
-  animation: heart-appear 200ms ease-in-out;
+  animation: heart-appear 600ms ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .heart-empty {
   position: absolute;
   font-size: 40px;
+  color: rgba(24, 23, 23, 0.678);
 }
 
 .hearts-menu:hover .heart-empty {
-  animation: heart-disappear 400ms ease-in-out;
+  animation: heart-disappear 600ms ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .hearts-index:hover .heart-empty {
-  animation: heart-disappear 400ms ease-in-out;
+  animation: heart-disappear 600ms ease-in-out;
   animation-fill-mode: forwards;
 }
 
@@ -62,14 +63,12 @@
 }
 
 @keyframes heart-appear {
-  0% {
-    opacity: 0;
-    transform: scaleX(0);
+    0% {
+      clip-path: circle(0%);
+    }
+  
+    100% {
+      visibility: visible;
+      clip-path: circle(100%);
+    }
   }
-
-  100% {
-    opacity: 1;
-    transform: scaleX(1);
-    visibility: visible;
-  }
-}

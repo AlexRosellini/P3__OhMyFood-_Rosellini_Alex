@@ -77,7 +77,6 @@
 .menu-bloc 
 {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     width: 100%;
     height: 85px;
@@ -86,12 +85,13 @@
     margin-bottom: 15px;
     padding-left: 10px;
     box-shadow: 0px 0px 10px rgba(131, 129, 129, 0.452);
+    overflow: hidden;
 
     &__left 
     {
         padding-right: 10px;
         margin-top: -5px;
-        font-size: 18px;        
+        font-size: 18px;
         white-space: nowrap;
         overflow: hidden;
     }
@@ -112,13 +112,20 @@
     &__right 
     {
         display: flex;
-        justify-content: flex-end;
-
+        margin-right: -60px;
+    }
+    
+    &__price 
+    { 
+        @include Flex-C;
+        font-size: 18px;
+        font-weight: bolder;
+        padding-left: 20px;
+        padding-right: 10px;
     }
 
-    &__icon 
+    &__icon
     {
-
         background-color: $tertiary;
         color: white;
         height: 85px;
@@ -126,16 +133,9 @@
         @include Flex-C;
         border-radius: 0px 20px 20px 0px;
         font-size: 25px;
-        visibility: hidden;
     }
 
-    &__price 
-    {
-        @include Flex-C;
-        margin-right: -40px;
-        font-size: 18px;
-        font-weight: bolder;
-    }
+   
 }
 
 .btn-container
@@ -146,21 +146,24 @@
     &__actual
     {
     @include Flex-C;
-    width: 100px;
-    height: 20px;
     font-size: 20px;
     border-radius: 200px;
     background-image: linear-gradient(to top, $primary, $secondary);
     padding: 10px;
     box-shadow: 0px 0px 10px rgba(179, 179, 179, 0.212);
     background-color: #faf4f4;
-    color: white;
     margin-bottom: 25px;
+
+      & a:link, a:visited {
+        color: white;
+      }
+
+      &:hover {
+        transform: scale(0.99);
+        opacity: 0.8;
+      }
     }
 }
-
-
-
 
 @import "../Utils/menuanim";
 
