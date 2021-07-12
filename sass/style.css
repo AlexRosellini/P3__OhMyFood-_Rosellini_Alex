@@ -240,7 +240,6 @@ body ul {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: #faf4f4;
 }
 
 .btn-container__actual {
@@ -667,6 +666,10 @@ body ul {
   padding-left: 14px;
 }
 
+.menu-general {
+  background-color: #faf4f4;
+}
+
 .menu-general__backimage {
   width: 100%;
 }
@@ -807,7 +810,7 @@ body ul {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: #faf4f4;
+  margin-top: 20px;
 }
 
 .btn-container__actual {
@@ -1007,6 +1010,9 @@ body ul {
 }
 
 @media screen and (min-width: 800px) {
+  .menu-general {
+    background-color: white;
+  }
   .menu-general__container {
     width: 98%;
     margin-top: -25px;
