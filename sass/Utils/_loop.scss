@@ -1,10 +1,21 @@
-.menu-bloc {
 
-@for $i from 1 through 4 {
+$anim-delay: 0.1s;
+$menu-categories: 3;
+$menu-items: 4;
+$column-anim-duration: ($anim-delay * $menu-items);
+
+.menu {
+  @for $i from 1 through $menu-categories {
     &:nth-child(#{$i}) {
-        animation-delay: ($i * 0.1s);
+      .menu-bloc {
+        @for $j from 1 through $menu-items {
+          &:nth-child(#{$j}) {
+            $column-offset: $i - 1;
+            $anim-offset: $column-offset * $column-anim-duration;
+            animation-delay: $anim-offset + ($j * ($anim-delay));
+          }
+        }
+      }
     }
+  }
 }
-}
-
-
