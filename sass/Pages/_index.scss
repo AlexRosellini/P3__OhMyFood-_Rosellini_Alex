@@ -1,160 +1,126 @@
-@import '../Utils/mixin';
-@import '../Utils/Variables';
+.fonctionement {
+  display: flex;
+  flex-direction: column;
 
+  & h2 {
+    text-align: left;
+    padding-left: 20px;
+  }
 
-.fonctionement
-{
-
+  &__box {
     display: flex;
-    flex-direction: column;
-    align-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    background-color: #f0efef;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 20px;
+    height: 40px;
+    border: rgba(235, 232, 232, 0) solid 1px;
+    box-shadow: 0px 0px 10px rgba(131, 129, 129, 0.452);
 
-    & h2 
-    {
-        text-align: left;
-        padding-left: 20px;
-        margin-bottom: -10px;
+    &:hover {
+      background-color: #9256dc46;
+      transition: 0.4s;
+
+      i {
+        color: $primary;
+      }
     }
+  }
 
-    &__box
-    {
-        display: inline-flex;
-        align-items: center;
-        flex-direction: row;
-        background-color: #f0efef;
-        padding: 10px;
-        border-radius: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-top: 20px;
-        height: 40px;
-        border: rgba(235, 232, 232, 0) solid 1px;
-        box-shadow: 0px 0px 10px rgba(131, 129, 129, 0.452);
+  &__number {
+    background-color: $primary;
+    color: white;
+    @include Flex-C;
+    margin-left: -18px;
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    border-radius: 200px;
+  }
 
-        &:hover
-        {
-            background-color: #9256dc46;
-            transition: 0.4s;
+  & p {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: bolder;
+  }
 
-            i 
-            {
-                color: $primary;
-            }
-        }
-    }
-
-    &__number
-    {
-        background-color: $primary;
-        color: white;
-        @include Flex-C;
-        margin-left: -18px;
-        width: 25px;
-        height: 25px;
-        min-width: 25px;
-        border-radius: 200px;
-    }
-
-    & p 
-    {
-        padding-right: 10px;
-        padding-left: 10px;
-        font-weight: bolder;
-    }
-
-    &__icon
-    {
-        padding-left: 10px;
-        color: gray;
-    }
-
+  &__icon {
+    padding-left: 10px;
+    color: gray;
+  }
 }
 
 .restaurants {
-    
-    background-color: #ebe6e66b;
+  background-color: #ebe6e66b;
 
-    &__title
-    {
-        padding-top: 20px;
-        margin-left: 20px;
-
-    }
+  &__title {
+    padding-top: 20px;
+    margin-left: 20px;
+  }
 }
 
 .restaurants-container {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
 
-    margin-left: 20px; 
-    margin-right: 20px;
-    padding-bottom: 20px;
-
-    &__box 
-    {
-        background-color: white;
-        box-shadow: 0px 0px 10px rgba(131, 129, 129, 0.452);
-        border-radius: 20px;
-        margin-bottom: 40px;
-        margin-right: 0;
-        height: 320px;
-    }
-
-    &__box:hover 
-    {
-        transform: scale(1.025);
-        box-shadow: 0px 0px 10px $primary;  
-        transition: 0.5s;
-    }
-
-    &__start
-    {
-        display: flex;
-        justify-content: flex-end;
-
-        & span
-        {
-            position: absolute;
-            margin: 1em;
-            font-size: 19px;
-            padding: 4px;
-            background-color: $tertiary;
-            
-        }
-
-    }
-
-    &__end
-    {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-  &__desc
-  {
-      padding-right: 10px;
-
-      & h3 
-      {
-          font-size: 22px;
-          margin-top: 8px;
-          padding: 0px;
-          padding-left: 15px;
-      }
-     
-      & p
-      {
-          font-size: 20px;
-          margin-top: -8px;
-          padding-left: 15px;
-      }
+  &__box {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(131, 129, 129, 0.452);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    height: 260px;
   }
 
-  &__img
-  {
-      object-fit: cover;
-      width: 100%;
-      border-radius: 15px;
-      height: 200px;
+  &__box:hover {
+    transform: scale(1.025);
+    box-shadow: 0px 0px 10px $primary;
+    transition: 0.5s;
   }
- 
+
+  &__start {
+    display: flex;
+    justify-content: flex-end;
+
+    & img 
+    {
+        object-fit: cover;
+        width: 100%;
+        border-radius: 20px 20px 0px 0px;
+        height: 150px;
+    }
+
+    & span {
+      position: absolute;
+      margin: 1em;
+      font-size: 19px;
+      padding: 4px;
+      background-color: $tertiary;
+    }
+  }
+
+  &__end {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__desc {
+    padding-right: 10px;
+
+    & h3 {
+      font-size: 20px;
+      margin-top: 10px;
+      padding-left: 15px;
+    }
+
+    & p {
+      font-size: 18px;
+      margin-top: -10px;
+      padding-left: 15px;
+    }
+  }
 }

@@ -1,67 +1,66 @@
-.menu-bloc:hover .menu-bloc__right
-{
+.menu-bloc {
+  animation: menu-appear 0.9s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.4, 1.41, 0.41, 0.9);
+
+  &:hover .menu-bloc__right {
     animation: appear 0.3s ease-out;
     animation-fill-mode: both;
+
+    .fa-check-circle {
+      animation: rotate 0.3s ease-in;
+      animation-fill-mode: both;
+    }
+  }
 }
 
-.menu-bloc:hover .fa-check-circle
-{
-    animation: rotate 0.3s ease-in;
-    animation-fill-mode: both;
+@keyframes rotate {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
-@keyframes rotate 
-{
-    0% {
-        transform: rotate(180deg);
-    }
+@keyframes moveleft {
+  0% {
+    transform: translateX(0);
+    padding-left: 50px;
+  }
 
-    100% {
-        transform: rotate(0deg);
-    }
+  100% {
+    transform: translateX(-50px);
+    padding-left: 50px;
+  }
 }
 
-@keyframes moveleft
-{
-    0% {
-        transform: translateX(0);
-        padding-left: 50px;
-    }
+@keyframes appear {
+  0% {
+    visibility: visible;
+    margin-right: -60px;
+  }
 
-    100% {
-        transform: translateX(-50px);
-        padding-left: 50px;
-    }
-}
-
-@keyframes appear
-{
-    0% {
-        visibility: visible;
-        margin-right: -60px;
-    }
-
-    100% {
-        visibility: visible;
-        margin-right: 0;
-    }
+  100% {
+    visibility: visible;
+    margin-right: 0;
+  }
 }
 
 .menu-bloc {
-    animation: menu-appear 0.9s;
-    animation-fill-mode: both;
-    animation-timing-function: cubic-bezier(.4,1.41,.41,.90);
-
+  animation: menu-appear 0.9s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.4, 1.41, 0.41, 0.9);
 }
 
-@keyframes menu-appear
-{
-    0% {
-        opacity: 0;
-    }
+@keyframes menu-appear {
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(15px);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(15px);
+  }
 }

@@ -1,12 +1,9 @@
+.btn-container {
+  @include Flex-C;
+  padding-top: 20px;
+  padding-bottom: 40px;
 
-.btn-container
-{
-    @include Flex-C;
-    padding-top: 20px;
-    padding-bottom: 30px;
-
-    &__actual
-    {
+  &__actual {
     @include Flex-C;
     font-size: 18px;
     border-radius: 200px;
@@ -15,16 +12,15 @@
     box-shadow: $boxshadow-light;
     background-color: #faf4f4;
 
-      & a:link, a:visited {
-        color: white;
-      }
-
-      &:hover {
-        transform: scale(0.96);
-        transition: 0.5s;
-        opacity: 0.9;
-        box-shadow: $boxshadow-dark;
-
-      }
+    & a:link, a:visited {
+      color: white;
     }
+
+    &:hover {
+      transform: scale(0.96);
+      transition: 0.5s;
+      opacity: 0.9;
+      box-shadow: $boxshadow-dark;
+    }
+  }
 }

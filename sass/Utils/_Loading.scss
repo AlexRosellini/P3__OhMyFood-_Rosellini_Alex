@@ -1,77 +1,75 @@
+@import "../Utils/Variables";
 
-@import '../Utils/Variables';
+.loadingbg {
+  /*Background-Loader*/
 
-.loadingbg
-{  
-  /*BackgroundLoader*/
-
-  width: 100%;
-  height: 100%;
   background-color: white;
   animation: bg ease-in-out 3s;
   animation-fill-mode: forwards;
-  margin: auto;
   z-index: 2;
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   visibility: hidden;
-  
-}  
+}
 
-  .loader
-  {
+.loader {
+  /*Loader*/
 
-/*Loader */
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 10px solid #f3f3f3;
+  border-left-color: $primary;
+  border-right-color: $secondary;
+  border-radius: 200px;
+  animation: spin 3s ease-in-out;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
 
- width: 100px;
- height: 100px;
- margin: auto;
- position: fixed;
- z-index: 2;
- top: 0; left: 0; right: 0; bottom: 0;
- border: 10px solid #f3f3f3;  
- border-left-color: $primary;
- border-right-color: $secondary;
- border-radius: 200px; 
- animation: spin 3s  ease-in-out;
- animation-fill-mode: forwards;
- visibility: hidden;
-  }  
- 
-  /*Animation*/
+/*Animation*/
 
-  @keyframes bg {
-    0% {
-      visibility: visible;
-    }
-
-    100% {
-      appearance: none;      
-    }
+@keyframes bg {
+  0% {
+    visibility: visible;
   }
 
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-      opacity: 1;
-      visibility: visible;
-    }
+  100% {
+    appearance: none;
+  }
+}
 
-    25% {
-      transform: rotate(360deg);
-    }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+    visibility: visible;
+  }
 
-    50% {
-      transform: rotate(720deg);
-    }
+  25% {
+    transform: rotate(360deg);
+  }
 
-    75% {
-      transform: rotate(1040deg);
-      opacity: 0.5;
-    }
+  50% {
+    transform: rotate(720deg);
+  }
 
-    100%{
-      transform:rotate(0deg);
-      opacity: 0;
-    }
-  } 
+  75% {
+    transform: rotate(1040deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+}
