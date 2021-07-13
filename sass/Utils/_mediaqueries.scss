@@ -1,0 +1,108 @@
+
+@media screen and (min-width: 1000px) {    
+
+    .fonctionement {
+    @include Flex-C;
+    flex-direction: row;
+
+    &__box 
+    {
+        margin-right: 10px;
+        margin-left: 20px;
+    } 
+
+    & h2
+    {
+        padding-left: 10px
+    }
+ }
+    .restaurants {
+        @include Flex-C;
+        flex-direction: column;
+        margin-top: 20px;
+
+        &__title
+        {
+            padding-bottom: 20px;
+        }
+
+    }
+
+    .restaurants-container {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+        &__box 
+        {
+            max-width: 500px;
+
+            p  {
+                padding-left: 15px;
+                text-align: left;
+            }
+        }
+    }
+
+    .footer ul 
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer li 
+    {
+        padding-right: 40px;
+    } 
+}
+
+@media screen and (min-width: 900px) 
+{
+    .menu-general {
+
+        background-color: white;
+      }
+    
+        .menu-general__container
+        {
+            width: 98%;
+            margin-top: -25px ;
+            margin-left: 14px;
+        }
+    
+        .menus 
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    
+        .menu 
+        {
+          width: 25%;
+        }    
+}
+
+@media screen and (min-width: 600px)  and (max-width: 1000px) 
+{    
+    .fonctionement {
+        @include Flex-C;
+        flex-direction: column;
+    
+        &__box 
+        {
+            margin-top: 40px;
+            margin-right: 10px;
+            margin-left: 20px;
+            width: 400px;
+        } 
+    
+        & h2
+        {
+            padding-left: 20px
+        }
+     }
+}

@@ -95,7 +95,7 @@
         border-radius: 20px;
         margin-bottom: 40px;
         margin-right: 0;
-        height: 300px;
+        height: 320px;
     }
 
     &__box:hover 
@@ -131,7 +131,8 @@
 
   &__desc
   {
-     
+      padding-right: 10px;
+
       & h3 
       {
           font-size: 22px;
@@ -157,66 +158,3 @@
   }
  
 }
-
-@media screen and (min-width: 800px) {    
-
-    .fonctionement {
-    @include Flex-C;
-    flex-direction: row;
-
-    &__box 
-    {
-        margin-right: 10px;
-        margin-left: 20px;
-    } 
-
-    & h2
-    {
-        padding-left: 10px
-    }
- }
-    .restaurants {
-        @include Flex-C;
-        flex-direction: column;
-        margin-top: 20px;
-
-        &__title
-        {
-            padding-bottom: 20px;
-        }
-
-    }
-
-    .restaurants-container {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 30px;
-        padding-left: 10px;
-        padding-right: 10px;
-        
-        &__box 
-        {
-            max-width: 500px;
-
-            p  {
-                padding-left: 15px;
-                text-align: left;
-            }
-        }
-    }
-
-    .footer ul 
-    {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .footer li 
-    {
-        padding-right: 40px;
-    }
-
-    
-}
-
