@@ -27,7 +27,7 @@
 
         & p 
         {
-            padding-left: 10px;
+            padding-left: 40px;
         }
     }
 
@@ -38,13 +38,15 @@
        width: 100%;
        height: auto;
        background-color: #fcf9f9;
-        padding-top: 10px;
+       padding-top: 10px;
 
        & p 
        {
         font-size: 19px;
         color: rgb(87, 86, 86);
         margin-top: -5px;
+        padding-left: 20px;
+        padding-right: 20px
        }
     }
 }       
