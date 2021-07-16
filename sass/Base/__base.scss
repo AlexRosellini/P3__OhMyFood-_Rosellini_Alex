@@ -1,20 +1,19 @@
+/*Elements généraux.*/
 
 body
-{
-    
+{ 
     margin: 0px;
     padding: 0px;
-
 
     & a:link, a:visited {
         text-decoration: none;
         color: black;
     }
 
-
     font-family: roboto;
-    
+
     & ul {
     list-style: none;
     }
 }
+

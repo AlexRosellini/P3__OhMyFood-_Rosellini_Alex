@@ -1,18 +1,18 @@
 
-$anim-delay: 0.1s;
-$menu-categories: 3;
-$menu-items: 4;
-$column-anim-duration: ($anim-delay * $menu-items);
+$anim-delay: 0.1s; /*Délais de l'animation*/
+$menu-categories: 3; /*Catégories (Entrée, Plat, Dessert)*/
+$menu-items: 4; /*Nombre d'éléments par catégories*/
+$column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colone*/
 
 .menu {
-  @for $i from 1 through $menu-categories {
-    &:nth-child(#{$i}) {
-      .menu-bloc {
-        @for $j from 1 through $menu-items {
+  @for $i from 1 through $menu-categories {  /*Pour chaque catégories*/
+    &:nth-child(#{$i}) {  
+      .menu-bloc { 
+        @for $j from 1 through $menu-items { /*Pour */
           &:nth-child(#{$j}) {
-            $column-offset: $i - 1;
-            $anim-offset: $column-offset * $column-anim-duration;
-            animation-delay: $anim-offset + ($j * ($anim-delay));
+            $column-offset: $i - 1; /*Child -1*/
+            $anim-offset: $column-offset * $column-anim-duration; /*Child -1 multiplier par animation par colone.*/
+            animation-delay: $anim-offset + ($j * ($anim-delay)); /*Delais final est offset + J*/
           }
         }
       }

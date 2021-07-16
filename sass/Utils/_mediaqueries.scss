@@ -1,4 +1,7 @@
 @media screen and (min-width: 1000px) {
+  /*Desktop*/
+  /*Index*/
+
   .fonctionement {
     @include Flex-C;
     flex-direction: row;
@@ -40,6 +43,7 @@
     }
   }
 
+  /*Footer*/
   .footer ul {
     display: flex;
     flex-direction: row;
@@ -50,6 +54,7 @@
   }
 }
 
+/*Menu*/
 @media screen and (min-width: 900px) {
   .menu-general {
     background-color: white;
@@ -85,6 +90,7 @@
   }
 }
 
+/*Tablette*/
 @media screen and (min-width: 600px) and (max-width: 1000px) {
   .fonctionement {
     @include Flex-C;

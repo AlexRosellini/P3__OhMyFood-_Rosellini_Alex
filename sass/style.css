@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/*Elements généraux.*/
 body {
   margin: 0px;
   padding: 0px;
@@ -259,6 +261,7 @@ body ul {
   padding-right: 14px;
 }
 
+/*Boutons dégradés*/
 .btn-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -309,6 +312,7 @@ body ul {
           box-shadow: 0px 7px 10px #969696;
 }
 
+/*Partie Fonctionement.*/
 .fonctionement {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,6 +392,7 @@ body ul {
   color: gray;
 }
 
+/*Partie restaurants.*/
 .restaurants {
   background-color: #ebe6e66b;
 }
@@ -401,6 +406,9 @@ body ul {
   margin-left: 20px;
   margin-right: 20px;
   padding-bottom: 20px;
+  /*Partie restaurants box.*/
+  /*Restaurants box, haut.*/
+  /*Restaurants box, bas.*/
 }
 
 .restaurants-container__box {

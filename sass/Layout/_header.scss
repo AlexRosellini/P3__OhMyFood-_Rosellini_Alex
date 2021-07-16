@@ -1,3 +1,5 @@
+/*Header Index*/
+
 .header-index {
 
     &__logo 
@@ -46,6 +48,8 @@
        }
     }
 }       
+
+/*Header Pages Restaurants*/
 
 .header-menu {
     @include Flex-C;

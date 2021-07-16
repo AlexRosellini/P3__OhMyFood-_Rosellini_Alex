@@ -1,3 +1,5 @@
+/*Animation Général*/
+
 .menu-bloc {
   animation: menu-appear 0.9s;
   animation-fill-mode: both;
@@ -14,6 +16,7 @@
   }
 }
 
+/*Keyframes*/
 @keyframes rotate {
   0% {
     transform: rotate(180deg);
@@ -46,12 +49,6 @@
     visibility: visible;
     margin-right: 0;
   }
-}
-
-.menu-bloc {
-  animation: menu-appear 0.9s;
-  animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.4, 1.41, 0.41, 0.9);
 }
 
 @keyframes menu-appear {

@@ -1,3 +1,5 @@
+/*Partie Fonctionement.*/
+
 .fonctionement {
   display: flex;
   flex-direction: column;
@@ -54,6 +56,8 @@
   }
 }
 
+/*Partie restaurants.*/
+
 .restaurants {
   background-color: #ebe6e66b;
 
@@ -68,6 +72,7 @@
   margin-right: 20px;
   padding-bottom: 20px;
 
+
   &__box {
     background-color: white;
     box-shadow: 0px 0px 10px rgba(131, 129, 129, 0.452);
@@ -81,6 +86,7 @@
     box-shadow: 0px 0px 10px $primary;
     transition: 0.5s;
   }
+
 
   &__start {
     display: flex;
