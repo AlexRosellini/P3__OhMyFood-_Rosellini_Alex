@@ -13,6 +13,9 @@ body a:link, body a:visited {
 
 body ul {
   list-style: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 /*Flex Center*/
@@ -1040,7 +1043,8 @@ header input {
     padding-right: 10px;
   }
   .restaurants-container__box {
-    max-width: 500px;
+    width: 425px;
+    min-width: 1%;
   }
   .restaurants-container__box p {
     text-align: left;

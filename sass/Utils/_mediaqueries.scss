@@ -35,7 +35,8 @@
     padding-right: 10px;
 
     &__box {
-      max-width: 500px;
+      width: 425px;
+      min-width: 1%;
 
       p {
         text-align: left;
