@@ -6,7 +6,7 @@ body {
   font-family: roboto;
 }
 
-body a:link, body a:visited {
+body a, body a:link, body a:visited {
   text-decoration: none;
   color: black;
 }
@@ -1043,7 +1043,7 @@ header input {
     padding-right: 10px;
   }
   .restaurants-container__box {
-    width: 425px;
+    width: 420px;
     min-width: 1%;
   }
   .restaurants-container__box p {
