@@ -213,7 +213,7 @@ header input {
   width: 130px;
   height: 45px;
   border: none;
-  padding-left: 10px;
+  margin-left: 10px;
 }
 
 /*Header Pages Restaurants*/
@@ -534,9 +534,6 @@ header input {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 1;
-  }
   100% {
     opacity: 0;
     visibility: hidden;
@@ -544,9 +541,6 @@ header input {
 }
 @keyframes heart-disappear {
   0% {
-    opacity: 1;
-  }
-  50% {
     opacity: 1;
   }
   100% {
