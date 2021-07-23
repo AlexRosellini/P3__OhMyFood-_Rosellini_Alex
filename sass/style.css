@@ -593,10 +593,6 @@ header input {
 
 .footer li {
   padding-bottom: 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-left: -10px;
   font-size: 18px;
   color: white;
   cursor: pointer;
@@ -1050,7 +1046,12 @@ header input {
     text-align: left;
   }
   /*Footer*/
-  .footer ul {
+  footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1058,9 +1059,18 @@ header input {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 50%;
   }
-  .footer li {
-    padding-right: 40px;
+  footer ul li {
+    width: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

@@ -45,13 +45,21 @@
   }
 
   /*Footer*/
-  .footer ul {
-    display: flex;
-    flex-direction: row;
-  }
+  footer {
+    align-items: center;
+  
+    & ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 50%;
 
-  .footer li {
-    padding-right: 40px;
+      & li {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 }
 
