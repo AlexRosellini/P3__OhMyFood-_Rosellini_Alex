@@ -145,10 +145,10 @@ body ul {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  border-bottom: solid 2px #ffffff;
+  border-bottom: solid 2px #b6b5b5;
   width: 100%;
   height: 100px;
-  background-color: #fcf9f9;
+  background-color: #ece9e9a9;
   -webkit-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -174,7 +174,7 @@ body ul {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  background-color: #ebe6e6;
+  background-color: #cecece;
   border-bottom: 1px;
 }
 
@@ -197,26 +197,41 @@ body ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #fcf9f9;
+  background-color: #ece9e9a9;
   padding-top: 10px;
 }
 
 .header-index__mainbox p {
   font-size: 19px;
-  color: #575656;
   margin-top: -5px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-header input {
-  font-size: 14px;
-  font-weight: 300;
+header .header-index__location input {
+  font-size: 18px;
+  font-weight: 600;
   background-color: inherit;
   width: 130px;
   height: 45px;
   border: none;
   margin-left: 10px;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+}
+
+:-ms-input-placeholder {
+  color: black;
+}
+
+::-ms-input-placeholder {
+  color: black;
+}
+
+::placeholder {
+  color: black;
 }
 
 /*Header Pages Restaurants*/
@@ -248,10 +263,10 @@ header input {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  border-bottom: solid 2px #ffffff;
+  border-bottom: solid 2px #b6b5b5;
   width: 100%;
   height: 100px;
-  background-color: #fcf9f9;
+  background-color: #ece9e9a9;
 }
 
 .header-menu__logo img {
@@ -271,8 +286,8 @@ header input {
   text-align: center;
   width: 5%;
   height: 100px;
-  background-color: #fcf9f9;
-  border-bottom: solid 2px #ffffff;
+  background-color: #ece9e9a9;
+  border-bottom: solid 2px #b6b5b5;
   font-size: 18px;
   padding-left: 14px;
   padding-right: 14px;
@@ -462,6 +477,8 @@ header input {
 
 .restaurants-container__start span {
   position: absolute;
+  color: rgba(0, 31, 0, 0.575);
+  font-weight: bold;
   margin: 1em;
   font-size: 19px;
   padding: 4px;
@@ -593,6 +610,10 @@ header input {
 
 .footer li {
   padding-bottom: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: -10px;
   font-size: 18px;
   color: white;
   cursor: pointer;
@@ -1046,12 +1067,7 @@ header input {
     text-align: left;
   }
   /*Footer*/
-  footer {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  footer ul {
+  .footer ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1059,18 +1075,9 @@ header input {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    width: 50%;
   }
-  footer ul li {
-    width: 20%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .footer li {
+    padding-right: 40px;
   }
 }
 

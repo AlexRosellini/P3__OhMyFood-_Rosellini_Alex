@@ -19,7 +19,7 @@
     @include Flex-C;
     flex-direction: row;
     width: 100%;
-    background-color: #ebe6e6;
+    background-color: #cecece;
     border-bottom: 1px;
     & p {
       padding-left: 20px;
@@ -34,21 +34,24 @@
 
     & p {
       font-size: 19px;
-      color: rgb(87, 86, 86);
       margin-top: -5px;
       padding-left: 20px;
       padding-right: 20px;
     }
   }
 }
-header input {
-  font-size: 14px;
-  font-weight: 300;
+header .header-index__location input {
+  font-size: 18px;
+  font-weight: 600;
   background-color: inherit;
   width: 130px;
   height: 45px;
   border: none;
   margin-left: 10px;
+}
+
+::placeholder {
+  color: black;
 }
 
 /*Header Pages Restaurants*/
