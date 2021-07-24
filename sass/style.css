@@ -614,9 +614,12 @@ header .header-index__location input {
   width: -moz-fit-content;
   width: fit-content;
   margin-left: -10px;
-  font-size: 18px;
-  color: white;
+  font-size: 16px;
   cursor: pointer;
+}
+
+.footer li a, .footer li a:visited, .footer li a:link {
+  color: white;
 }
 
 .footer li:hover {
